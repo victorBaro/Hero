@@ -80,10 +80,10 @@ public extension HeroExtension where Base: UIViewController {
           base.previousNavigationDelegate = navi.delegate
           navi.delegate = Hero.shared
         }
-        if let tab = base as? UITabBarController {
-          base.previousTabBarDelegate = tab.delegate
-          tab.delegate = Hero.shared
-        }
+        // if let tab = base as? UITabBarController {
+        //   base.previousTabBarDelegate = tab.delegate
+        //   tab.delegate = Hero.shared
+        // }
       } else {
         base.transitioningDelegate = nil
         if let navi = base as? UINavigationController, navi.delegate is HeroTransition {
